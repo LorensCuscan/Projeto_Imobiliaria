@@ -22,7 +22,7 @@
 					<div class="col-xs-11 text-right menu-1">
 						<ul>
 							<li><a href="{{ route('home') }}">Home</a></li>
-							<li class="active"><a href="{{  route('home')  }}">Curso</a></li>
+							<li class="active"><a href="{{  route('course')  }}">Curso</a></li>
 							<li><a href="{{  route('blog')  }}">Blog</a></li>
 							<li class="active"><a href="{{  route('contact')  }}">Contato</a></li>
 							<li class="btn-cta"><a href="#"><span>Login</span></a></li>
