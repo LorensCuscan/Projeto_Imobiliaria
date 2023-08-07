@@ -1,29 +1,57 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use CoffeeCode\Optimizer\Optimizer;
 use Illuminate\Http\Request;
 use App\Providers\RouteServiceProvider;
-
+use App\Support\Seo;
 class WebController extends Controller
 {
     public function home()
     {
-        return view('front.home');
+        $seo = new Seo();
+        $head = $seo->render(env('APP_NAME') . ' - Projeto Lorens', 'Site imoboliaria', '/', asset('images/img_bg_1.jpg'));
+
+        return view('front.home', [
+            'head' => $head
+        ]);
     }
 
     public function course(){
-        return view ('front.course');
+        $seo = new Seo();
+        $head = $seo->render(env('APP_NAME') . ' - Sobre o Site', 'Site imoboliaria', route('course'), asset('images/img_bg_1.jpg'));
+
+        return view('front.course', [
+            'head' => $head
+        ]);
+        
     }
 
     public function blog(){
-        return view ('front.blog');
+        $seo = new Seo();
+        $head = $seo->render(env('APP_NAME') . ' - Projeto Lorens', 'Site imoboliaria', '/', asset('images/img_bg_1.jpg'));
+
+        return view('front.blog', [
+            'head' => $head
+        ]);
+       
     }
 
     public function article(){
-        return view ('front.course');
+        $seo = new Seo();
+        $head = $seo->render(env('APP_NAME') . ' - Projeto Lorens', 'Site imoboliaria', '/', asset('images/img_bg_1.jpg'));
 
-    }public function contact(){
-        return view ('front.contact');
+        return view('front.course', [
+            'head' => $head
+        ]);
+    }
+    
+    public function contact(){
+        $seo = new Seo();
+        $head = $seo->render(env('APP_NAME') . ' - Projeto Lorens', 'Site imoboliaria', '/', asset('images/img_bg_1.jpg'));
+
+        return view('front.contact', [
+            'head' => $head
+        ]);
     }
 }
