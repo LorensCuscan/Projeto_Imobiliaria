@@ -11,7 +11,6 @@ class Seo{
         $this->optmizer->openGraph(env('APP_NAME'),
          'pt_BR', 
          'article'
-        
         );
     }
 }
