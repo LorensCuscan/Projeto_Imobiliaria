@@ -11,7 +11,13 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix
+.styles([
+    'resources/views/front/assets/css/animate.css',
+    'resources/views/front/assets/css/icomoon.css',
+    'resources/views/front/assets/css/bootstrap.css',
+    'resources/views/front/assets/css/magnific-popup.css',
+    'resources/views/front/assets/css/owl.carousel.min.css',
+    'resources/views/front/assets/css/owl.theme.default.min.css',
+], 'public/front/assets/css/vendor.css')
+
