@@ -12,6 +12,8 @@ const mix = require('laravel-mix');
  */
 
 mix
+    .sass('resources/views/front/assets/sass/style.css', 'public/front/assets/css/style.css')
+
     .styles([
         'resources/views/front/assets/css/animate.css',
         'resources/views/front/assets/css/icomoon.css',
